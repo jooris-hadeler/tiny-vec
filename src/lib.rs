@@ -79,7 +79,7 @@ impl<T: Sized, const STACK_CAPACITY: usize> TinyVec<T, STACK_CAPACITY> {
         }
     }
 
-    /// Gets the element at a given index if it exists.
+    /// Gets the element at a given index if it exists, and returns a reference to it.
     pub fn get(&self, index: usize) -> Option<&T> {
         if index >= self.length {
             return None;
@@ -91,6 +91,7 @@ impl<T: Sized, const STACK_CAPACITY: usize> TinyVec<T, STACK_CAPACITY> {
         }
     }
 
+    /// Gets the element at a given index if it exists, and returns a mutable reference to it.
     pub fn get_mut(&mut self, index: usize) -> Option<&mut T> {
         if index >= self.length {
             return None;
