@@ -2,5 +2,7 @@
 name = "tiny-vec"
 version = "0.1.0"
 edition = "2021"
+description = "This crate provides a vec-like datastructure that allows storing items on the stack which will be moved to the stack on overflow."
+authors = ["Jooris Hadeler"]
 
 [dependencies]
